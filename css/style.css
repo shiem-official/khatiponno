@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Fjalla+One&display=swap');
+@import "tailwindcss"
+* {
+    font-family: "Anek Bangla", sans-serif;
+}
+
+body {
+    font-family: "Anek Bangla", sans-serif;
+}
+
+/* Hide Scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Active Nav */
+.nav-link-active {
+    border-bottom: 2px solid #1d4ed8;
+    color: #1d4ed8;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 14px;
+}
+
+.swiper-pagination-bullet {
+    background: #93c5fd;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1d4ed8;
+}
+
+/* Product Hover */
+.product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover */
+.btn-hover-effect {
+    transition: all 0.2s;
+}
+.btn-hover-effect:hover {
+    transform: scale(0.97);
+}
+
+.swiper-pagination-bullet {
+    background: #93c5fd;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: #1d4ed8;
+}
