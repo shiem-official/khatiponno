@@ -7,7 +7,9 @@
 body {
     font-family: "Anek Bangla", sans-serif;
 }
-
+#loader {
+    backdrop-filter: blur(3px);
+}
 /* Hide Scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
     display: none;

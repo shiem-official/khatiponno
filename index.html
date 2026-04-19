@@ -13,6 +13,37 @@
 </head>
 
 <body>
+
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+
+        <div class="text-center">
+
+            <!-- Circle Loader -->
+            <div class="relative w-35 h-35 mx-auto mb-4">
+
+                <!-- Animated Ring -->
+                <div class="absolute inset-0 rounded-full border-4 border-blue-200"></div>
+
+                <div class="absolute inset-0 rounded-full border-4 border-transparent border-t-blue-700 animate-spin">
+                </div>
+
+                <!-- Inner Logo -->
+                <div class="absolute inset-4 bg-white rounded-lg flex items-center justify-center shadow">
+                    <!-- এখানে তোমার logo বসাও -->
+                    <img src="images/খাঁটি পণ্য  logo.png" class="w-10 h-10 object-contain">
+                </div>
+
+            </div>
+
+            <!-- Website Name -->
+            <h2 class="text-lg font-semibold text-gray-700 tracking-wide">
+                খাঁটি পণ্য
+            </h2>
+
+        </div>
+
+    </div>
     <!-- header start -->
     <header class="w-full bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50 overflow-x-hidden">
         <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-8">
@@ -113,20 +144,17 @@
 
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <img src="images/oil 1.jpg"
-                                class="w-full aspect-video object-cover">
+                            <img src="images/oil 1.jpg" class="w-full aspect-video object-cover">
                         </div>
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <img src="images/oil 2.jpg"
-                                class="w-full aspect-video object-cover">
+                            <img src="images/oil 2.jpg" class="w-full aspect-video object-cover">
                         </div>
 
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <img src="images/oil 3.jpg"
-                                class="w-full aspect-video object-cover">
+                            <img src="images/oil 3.jpg" class="w-full aspect-video object-cover">
                         </div>
 
                     </div>
@@ -134,7 +162,7 @@
                     <!-- Pagination -->
                     <div class="swiper-pagination"></div>
 
-                    
+
 
                 </div>
             </div>
@@ -853,7 +881,7 @@
     <!-- footer section -->
     <footer class="bg-gray-100 mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-            
+
             <!-- Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
 
@@ -876,13 +904,16 @@
 
                     <!-- Social -->
                     <div class="flex gap-3 mt-4">
-                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
                             <i class="fab fa-facebook-f text-xs"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
                             <i class="fab fa-twitter text-xs"></i>
                         </a>
-                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
+                        <a href="#"
+                            class="w-8 h-8 flex items-center justify-center bg-blue-100 text-blue-700 rounded-full hover:bg-blue-700 hover:text-white transition">
                             <i class="fab fa-instagram text-xs"></i>
                         </a>
                     </div>
@@ -945,6 +976,19 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.5s ease";
+
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }, 800); // delay time
+        });
         function scrollLeft() {
             document.getElementById("categoryScroll").scrollBy({
                 left: -300,
@@ -959,47 +1003,48 @@
             });
         }
 
-let reviewSwiper = new Swiper(".myReviewSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 16,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        640: {
+        let reviewSwiper = new Swiper(".myReviewSwiper", {
             slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-        },
-    },
-});
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
 
-let heroSwiper = new Swiper(".heroSwiper", {
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".heroSwiper .swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".heroSwiper .swiper-button-next",
-        prevEl: ".heroSwiper .swiper-button-prev",
-    },
-});
+        let heroSwiper = new Swiper(".heroSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".heroSwiper .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".heroSwiper .swiper-button-next",
+                prevEl: ".heroSwiper .swiper-button-prev",
+            },
+        });
 
     </script>
 </body>
+
 </html>
